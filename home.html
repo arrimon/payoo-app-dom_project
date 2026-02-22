@@ -93,8 +93,40 @@
             </div>
         </section>
 
+        <!-- Add Money form Section -->
+        <section id="add-money" class="px-6 py-5 mx-auto space-y-3">
+            <h2 class="text-xl font-bold">Add Money</h2>
+            <fieldset class="fieldset mx-auto bg-base-100 border-base-300 rounded-2xl shadow-xs border p-6">
+                <!-- <legend class="fieldset-legend">Login</legend> -->
+
+                <label class="label text-neutral font-bold">Select A Bank</label>
+                <select id="add-money-bank" class="w-full select rounded-full bg-base-200 mb-2">
+                    <option disabled selected>Select A Bank</option>
+                    <option value="BBBL">BBBL</option>
+                    <option value="IBBL">IBBL</option>
+                    <option value="UCB">UCB</option>
+                    <option value="CBBL">CBBL</option>
+                </select>
+
+
+                <label class="label text-neutral font-bold">Bank Account Number</label>
+                <input id="bank-account-number" maxlength="11" minlength="11" type="text" class="w-full input rounded-full bg-base-200 mb-2" placeholder="Enter 11 digit account number" />
+
+
+                <label class="label text-neutral font-bold">Amount to Add</label>
+                <input id="add-amount" maxlength="5" minlength="2" type="text" class="w-full input rounded-full bg-base-200 mb-2" placeholder="Add Amount to Withdraw" />
+                
+
+                <label class="label text-neutral font-bold">Pin number</label>
+                <input id="add-money-pin" maxlength="4" minlength="4" type="password" class="w-full input rounded-full bg-base-200 mb-2" placeholder="Enter 4 Digit Pin Number" />
+
+
+                <button id="add-money-btn" class="btn btn-primary mt-4 rounded-full font-bold">Add Money</button>
+            </fieldset>
+        </section>
+
         <!-- Cashout form Section -->
-        <section id="cshout" class="px-6 py-5 mx-auto space-y-3">
+        <section id="cashout" class="px-6 py-5 mx-auto space-y-3">
             <h2 class="text-xl font-bold">Cash Out</h2>
             <fieldset class="fieldset mx-auto bg-base-100 border-base-300 rounded-2xl shadow-xs border p-6">
                 <!-- <legend class="fieldset-legend">Login</legend> -->
@@ -114,8 +146,71 @@
                 <button id="cashout-btn" class="btn btn-primary mt-4 rounded-full font-bold">Withdraw Money</button>
             </fieldset>
         </section>
+
+        <!-- Transfer Money form Section -->
+        <section id="transfer-money" class="px-6 py-5 mx-auto space-y-3">
+            <h2 class="text-xl font-bold">Transfer Money</h2>
+            <fieldset class="fieldset mx-auto bg-base-100 border-base-300 rounded-2xl shadow-xs border p-6">
+                <!-- <legend class="fieldset-legend">Login</legend> -->
+
+                <label class="label text-neutral font-bold">User Account Number</label>
+                <input id="input-agent-number" maxlength="11" minlength="11" type="text" class="w-full input rounded-full bg-base-200 mb-2" placeholder="Enter 11 digit number" />
+
+
+                <label class="label text-neutral font-bold">Amount</label>
+                <input id="cashout-amount" maxlength="5" minlength="2" type="text" class="w-full input rounded-full bg-base-200 mb-2" placeholder="Enter amount to transfer" />
+                
+
+                <label class="label text-neutral font-bold">Pin number</label>
+                <input id="cashout-pin" maxlength="4" minlength="4" type="password" class="w-full input rounded-full bg-base-200 mb-2" placeholder="Enter 4 Digit Pin Number" />
+
+
+                <button id="send-money-btn" class="btn btn-primary mt-4 rounded-full font-bold">Send Now</button>
+            </fieldset>
+        </section>
+
+        <!-- Get Bonus Money form Section -->
+        <section id="bonus-money" class="px-6 py-5 mx-auto space-y-3">
+            <h2 class="text-xl font-bold">Get Bonus</h2>
+            <fieldset class="fieldset mx-auto bg-base-100 border-base-300 rounded-2xl shadow-xs border p-6">
+                <!-- <legend class="fieldset-legend">Login</legend> -->
+
+                <label class="label text-neutral font-bold">Enter Bonus Coupon</label>
+                <input id="input-agent-number" type="text" class="w-full input rounded-full bg-base-200 mb-2" placeholder="Enter your coupon" />
+
+
+                <button id="send-money-btn" class="btn btn-primary mt-4 rounded-full font-bold">Get Bonus</button>
+            </fieldset>
+        </section>
+        
+        <!-- Pay Bill Money form Section -->
+        <section id="paybill-money" class="px-6 py-5 mx-auto space-y-3">
+            <h2 class="text-xl font-bold">Pay Bill</h2>
+            <fieldset class="fieldset mx-auto bg-base-100 border-base-300 rounded-2xl shadow-xs border p-6">
+                <!-- <legend class="fieldset-legend">Login</legend> -->
+
+                <label class="label text-neutral font-bold">Select To Pay</label>
+                <input id="input-agent-number" maxlength="11" minlength="11" type="text" class="w-full input rounded-full bg-base-200 mb-2" placeholder="Select back" />
+
+
+                <label class="label text-neutral font-bold">Biller Account Number</label>
+                <input id="cashout-amount" maxlength="5" minlength="2" type="text" class="w-full input rounded-full bg-base-200 mb-2" placeholder="Enter account number" />
+
+
+                <label class="label text-neutral font-bold">Amount to Pay</label>
+                <input id="cashout-amount" maxlength="5" minlength="2" type="text" class="w-full input rounded-full bg-base-200 mb-2" placeholder="Add Amount to pay" />
+                
+
+                <label class="label text-neutral font-bold">Pin number</label>
+                <input id="cashout-pin" maxlength="4" minlength="4" type="password" class="w-full input rounded-full bg-base-200 mb-2" placeholder="Enter 4 Digit Pin Number" />
+
+
+                <button id="send-money-btn" class="btn btn-primary mt-4 rounded-full font-bold">Pay Now</button>
+            </fieldset>
+        </section>
     </main>
     <script src="./scripts/machine.js"></script>
+    <script src="./scripts/addmoney.js"></script>
     <script src="./scripts/home.js"></script>
     <script src="./scripts/cashout.js"></script>
 </body>

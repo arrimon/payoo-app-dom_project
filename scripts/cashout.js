@@ -13,8 +13,8 @@ document.getElementById('cashout-btn')
         console.log(cashoutAmountInput)
 
         // srep:3 get the Current Balance, valiudate, convert to number
-        const balanceElement = document.getElementById('balance');
-        const balance = balanceElement.innerText;
+        // const balanceElement = document.getElementById('balance');
+        const balance = getBalance();
         console.log(balance)
         // const balanceElement = getValueFromInnerText('balance');
         // console.log(balanceElement);
@@ -34,7 +34,11 @@ document.getElementById('cashout-btn')
             // srep:5-1 True: Show alart > Set balance
             alert('Cashout Successfully')
             console.log(`new balance is: ${newBalance}`);
-            balanceElement.innerText = newBalance;
+
+            // Add new balance update
+            // document.getElementById('balance').innerText = newBalance;
+            // Add new balance update
+            setBalance(newBalance);
             return;
         }
         else{
