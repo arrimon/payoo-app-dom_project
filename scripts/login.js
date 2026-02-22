@@ -15,7 +15,7 @@ document.getElementById('login-btn')
             // Step:3-1 True:: >> alart > Homepage
             alert('Loging Success')
             // window.location.replace('/home.html');
-            window.location.assign('/home.html');
+            window.location.assign('home.html');
         }
         else{
             // Step:3-2 False:: >> alart > Return
