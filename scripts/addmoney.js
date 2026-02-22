@@ -21,16 +21,21 @@ document.getElementById('add-money-btn')
         // console.log(addAmoount);
 
         // Step:4 get current balance after add amount 
-        const currentNewBalance = Number(getBalance()) + Number(addAmount)
-        console.log(currentNewBalance);
+        const currentBalance = Number(getBalance());
+        const newBalance = currentBalance + Number(addAmount)
+        console.log(currentBalance);
 
         // Step:5 Set current balance with verify Pin number
         const pin = getValueFromInput('add-money-pin');
         if(pin == '1212'){
             // Step:5-1 verify with pin
-            const newBalance = setBalance(currentNewBalance)
+            alert(`
+                Payment successfully Added ${addAmount} TK 
+                now total Amount ${newBalance}TK 
+                from ${selectBank} 
+                at ${newDate}`)
+            setBalance(newBalance)
             // console.log(newBalance)
-            alert(`Payment Added successfully`)
             return;
         }
         else{
